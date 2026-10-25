@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script>(function(d){var r=d.documentElement;r.classList.add('js');try{var t=localStorage.getItem('fk-theme');if(t==='dark'||t==='light')r.setAttribute('data-theme',t)}catch(e){}})(document)</script>
+  <title>Hazır Kalıplar: Hero, CTA, Footer — fkdev UI</title>
+  <meta name="description" content="fkdev UI hazır sayfa kalıpları: hero, sayfa başlığı ve breadcrumb, CTA bandı, özellik ızgarası, footer, 404 sayfası, iletişim kanalları ve yapay zekâ sohbet arayüzü.">
+  <meta name="keywords" content="fkdev ui, tasarım sistemi, css kütüphanesi, liquid glass, furkan kırcı">
+  <meta name="author" content="Furkan Kırcı">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#f4f4f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#050505" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://ui.fkdev.sbs/kaliplar/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="fkdev UI">
+  <meta property="og:url" content="https://ui.fkdev.sbs/kaliplar/">
+  <meta property="og:title" content="Hazır Kalıplar: Hero, CTA, Footer — fkdev UI">
+  <meta property="og:description" content="fkdev UI hazır sayfa kalıpları: hero, sayfa başlığı ve breadcrumb, CTA bandı, özellik ızgarası, footer, 404 sayfası, iletişim kanalları ve yapay zekâ sohbet arayüzü.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hazır Kalıplar: Hero, CTA, Footer — fkdev UI">
+  <meta name="twitter:description" content="fkdev UI hazır sayfa kalıpları: hero, sayfa başlığı ve breadcrumb, CTA bandı, özellik ızgarası, footer, 404 sayfası, iletişim kanalları ve yapay zekâ sohbet arayüzü.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&amp;family=Geist:wght@300..700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/v2.4.1/fkdev-ui.min.css">
+  <link rel="stylesheet" href="/assets/docs.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://ui.fkdev.sbs/#website","url":"https://ui.fkdev.sbs/","name":"fkdev UI","inLanguage":"tr-TR","publisher":{"@type":"Person","name":"Furkan Kırcı","url":"https://www.fkdev.sbs/"}},{"@type":"TechArticle","@id":"https://ui.fkdev.sbs/kaliplar/#page","url":"https://ui.fkdev.sbs/kaliplar/","headline":"Hazır Kalıplar: Hero, CTA, Footer — fkdev UI","name":"Hazır Kalıplar: Hero, CTA, Footer — fkdev UI","description":"fkdev UI hazır sayfa kalıpları: hero, sayfa başlığı ve breadcrumb, CTA bandı, özellik ızgarası, footer, 404 sayfası, iletişim kanalları ve yapay zekâ sohbet arayüzü.","inLanguage":"tr-TR","dateModified":"2026-10-24","isPartOf":{"@id":"https://ui.fkdev.sbs/#website"},"author":{"@type":"Person","name":"Furkan Kırcı","url":"https://www.fkdev.sbs/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"fkdev UI","item":"https://ui.fkdev.sbs/"},{"@type":"ListItem","position":2,"name":"Kalıplar","item":"https://ui.fkdev.sbs/kaliplar/"}]}]}</script>
+</head>
+<body class="fk-body fk-atmosphere">
+  <div class="fk-readbar" aria-hidden="true"></div>
+  <a class="skip" href="#icerik">İçeriğe atla</a>
+  <header class="fk-navbar" data-fk-autohide>
+    <div class="fk-navbar-in fk-glass">
+      <a class="fk-brand" href="/" aria-label="fkdev UI ana sayfa"><b>fkdev <i>UI</i></b><small>v2.4.1</small></a>
+      <nav class="fk-tabsbar" aria-label="Ana bölümler"><span class="fk-tabsbar-ind" aria-hidden="true"></span><a href="/bilesenler/">Bileşenler</a><a href="/formlar/">Formlar</a><a href="/cdn/">CDN</a><a href="/yapay-zeka/">Yapay zekâ</a><a href="https://admin.fkdev.sbs/">Dashboard ↗</a></nav>
+      <div class="fk-navbar-tools">
+        <button class="docs-search-btn" type="button" data-search aria-label="Dokümantasyonda ara"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="t">Ara</span><span class="fk-kbd">Ctrl K</span></button>
+        <button class="fk-btn-icon fk-btn" type="button" data-fk-theme-toggle aria-label="Temayı değiştir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fk-i-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fk-i-moon"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+        <button class="fk-btn fk-btn-icon fk-burger" type="button" data-fk-menu="#fk-menu" aria-label="Menüyü aç"><svg class="fk-i-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg><svg class="fk-i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+    </div>
+  </header>
+  <div class="fk-menu" id="fk-menu">
+    <div class="fk-menu-in">
+      <nav aria-label="Dokümantasyon sayfaları">
+        <div class="fk-menu-list">
+          <a href="/" style="--i:0">Genel bakış <span>01</span></a>
+          <a href="/baslangic/" style="--i:1">Kurulum <span>02</span></a>
+          <a href="/cdn/" style="--i:2">CDN <span>03</span></a>
+          <a href="/temeller/" style="--i:3">Temeller <span>04</span></a>
+          <a href="/bilesenler/" style="--i:4">Bileşenler A–Z <span>05</span></a>
+          <a href="/formlar/" style="--i:5">Formlar <span>06</span></a>
+          <a href="/hareket/" style="--i:6">Hareket &amp; JS <span>07</span></a>
+          <a href="/kaliplar/" style="--i:7" aria-current="page">Kalıplar <span>08</span></a>
+          <a href="/veritabani/" style="--i:8">Veritabanı <span>09</span></a>
+          <a href="/entegrasyon/" style="--i:9">Framework &amp; PHP <span>10</span></a>
+          <a href="/yapay-zeka/" style="--i:10">Yapay zekâ <span>11</span></a>
+          <a href="/yayin/" style="--i:11">SEO, güvenlik, yayın <span>12</span></a>
+          <a href="/surumler/" style="--i:12">Sürüm notları <span>13</span></a>
+          <a href="/sozluk/" style="--i:13">Sözlük A–Z <span>14</span></a>
+          <a href="https://admin.fkdev.sbs/" style="--i:14" rel="noopener">Admin Dashboard ↗ <span>15</span></a>
+          <a href="https://www.fkdev.sbs/" style="--i:15" rel="noopener">fkdev.sbs ↗ <span>16</span></a>
+        </div>
+      </nav>
+      <div class="fk-menu-foot"><a href="https://www.fkdev.sbs/">fkdev.sbs</a><a href="https://ui.fkdev.sbs/" aria-current="true">ui.fkdev.sbs</a><a href="https://admin.fkdev.sbs/">admin.fkdev.sbs</a><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>fkdevs</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg>ik@fkdev.sbs</span></div>
+    </div>
+  </div>
+  <div class="docs-shell">
+    <main class="docs-main" id="icerik">
+
+      <header class="doc-head">
+        <nav class="fk-crumbs fk-glass" aria-label="Sayfa yolu"><ol><li><a href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>fkdev UI</span></a></li><li class="fk-sep" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></li><li><span aria-current="page">Kalıplar</span></li></ol></nav>
+        <p><span class="fk-eyebrow fk-glass">Kalıplar · Hazır bölümler</span></p>
+        <h1>Hazır <em>bölümler.</em></h1>
+        <p class="fk-lede">Bileşenleri birleştirip sayfa bölümleri kur. Her kalıp fkdev.sbs’te gerçekten kullanılan yapıdır.</p>
+
+      </header>
+      <div class="doc">
+        <section id="hero" aria-labelledby="hero-t">
+          <h2 id="hero-t"><span class="n">01</span>Hero<a class="anchor" href="#hero" aria-label="Hero bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo"><section class="fk-center" style="padding:40px 0;width:100%">
+  <h1 class="fk-display" data-fk-split style="font-size:clamp(48px,8vw,110px)">Furkan <em>Kırcı</em></h1>
+  <p class="fk-lede" style="margin:24px auto 0">Merhabalar, ben Furkan. Kısaca Furkan diyebilirsiniz.</p>
+  <p class="fk-aside" style="margin:6px 0 30px">(Uzun hâlini soran olursa: o da Furkan.)</p>
+  <div class="fk-cluster" style="justify-content:center"><a class="fk-btn fk-btn-primary" href="#hero" data-fk-magnetic>Bir dakikada Furkan <svg class="fk-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="fk-btn fk-btn-ghost" href="#hero">Hikâyem</a></div>
+</section></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;section class=&quot;fk-center&quot; style=&quot;padding:40px 0;width:100%&quot;&gt;
+  &lt;h1 class=&quot;fk-display&quot; data-fk-split style=&quot;font-size:clamp(48px,8vw,110px)&quot;&gt;Furkan &lt;em&gt;Kırcı&lt;/em&gt;&lt;/h1&gt;
+  &lt;p class=&quot;fk-lede&quot; style=&quot;margin:24px auto 0&quot;&gt;Merhabalar, ben Furkan. Kısaca Furkan diyebilirsiniz.&lt;/p&gt;
+  &lt;p class=&quot;fk-aside&quot; style=&quot;margin:6px 0 30px&quot;&gt;(Uzun hâlini soran olursa: o da Furkan.)&lt;/p&gt;
+  &lt;div class=&quot;fk-cluster&quot; style=&quot;justify-content:center&quot;&gt;&lt;a class=&quot;fk-btn fk-btn-primary&quot; href=&quot;#hero&quot; data-fk-magnetic&gt;Bir dakikada Furkan &lt;svg class=&quot;fk-go&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M5 12h14M13 6l6 6-6 6&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a class=&quot;fk-btn fk-btn-ghost&quot; href=&quot;#hero&quot;&gt;Hikâyem&lt;/a&gt;&lt;/div&gt;
+&lt;/section&gt;</code></pre></div></figure>
+        </section>
+        <section id="sayfa-basi" aria-labelledby="sayfa-basi-t">
+          <h2 id="sayfa-basi-t"><span class="n">02</span>Sayfa başı ve breadcrumb<a class="anchor" href="#sayfa-basi" aria-label="Sayfa başı ve breadcrumb bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo"><header class="fk-center" style="width:100%">
+  <nav class="fk-crumbs fk-glass" aria-label="Örnek kalıp sayfa yolu"><ol><li><a href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Ana Sayfa</span></a></li><li class="fk-sep" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></li><li><span aria-current="page">Deneyim</span></li></ol></nav>
+  <p style="margin:24px 0 0"><span class="fk-eyebrow fk-glass">4 durak · 4 ders</span></p>
+  <h1 class="fk-h1" style="margin-top:20px">Yaptıkça <em>öğrendim.</em></h1>
+</header></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;header class=&quot;fk-center&quot; style=&quot;width:100%&quot;&gt;
+  &lt;nav class=&quot;fk-crumbs fk-glass&quot; aria-label=&quot;Örnek kalıp sayfa yolu&quot;&gt;&lt;ol&gt;&lt;li&gt;&lt;a href=&quot;/&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z&quot;/&gt;&lt;/svg&gt;&lt;span&gt;Ana Sayfa&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;fk-sep&quot; aria-hidden=&quot;true&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;m9 6 6 6-6 6&quot;/&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li&gt;&lt;span aria-current=&quot;page&quot;&gt;Deneyim&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/nav&gt;
+  &lt;p style=&quot;margin:24px 0 0&quot;&gt;&lt;span class=&quot;fk-eyebrow fk-glass&quot;&gt;4 durak · 4 ders&lt;/span&gt;&lt;/p&gt;
+  &lt;h1 class=&quot;fk-h1&quot; style=&quot;margin-top:20px&quot;&gt;Yaptıkça &lt;em&gt;öğrendim.&lt;/em&gt;&lt;/h1&gt;
+&lt;/header&gt;</code></pre></div></figure>
+        </section>
+        <section id="cta" aria-labelledby="cta-t">
+          <h2 id="cta-t"><span class="n">03</span>CTA bandı<a class="anchor" href="#cta" aria-label="CTA bandı bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo"><div class="fk-card fk-center" style="width:100%;padding:56px 24px">
+  <h2 class="fk-h2">Kahve benden, <em>fikir sizden.</em></h2>
+  <p style="margin:16px auto 28px;max-width:520px">Projeniz için yazın; nerede olursanız olun cevap gelir.</p>
+  <div class="fk-cluster" style="justify-content:center"><a class="fk-btn fk-btn-primary" href="#cta">İletişime geçin <svg class="fk-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-card fk-center&quot; style=&quot;width:100%;padding:56px 24px&quot;&gt;
+  &lt;h2 class=&quot;fk-h2&quot;&gt;Kahve benden, &lt;em&gt;fikir sizden.&lt;/em&gt;&lt;/h2&gt;
+  &lt;p style=&quot;margin:16px auto 28px;max-width:520px&quot;&gt;Projeniz için yazın; nerede olursanız olun cevap gelir.&lt;/p&gt;
+  &lt;div class=&quot;fk-cluster&quot; style=&quot;justify-content:center&quot;&gt;&lt;a class=&quot;fk-btn fk-btn-primary&quot; href=&quot;#cta&quot;&gt;İletişime geçin &lt;svg class=&quot;fk-go&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M5 12h14M13 6l6 6-6 6&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div></figure>
+        </section>
+        <section id="ozellikler" aria-labelledby="ozellikler-t">
+          <h2 id="ozellikler-t"><span class="n">04</span>Özellik ızgarası<a class="anchor" href="#ozellikler" aria-label="Özellik ızgarası bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo"><div class="fk-grid fk-g-3" style="width:100%">
+  <article class="fk-card fk-center"><span class="fk-card-num">01</span><h3 class="fk-card-title">Simetri</h3><p>Her şey yerli yerinde.</p></article>
+  <article class="fk-card fk-center"><span class="fk-card-num">02</span><h3 class="fk-card-title">Hız</h3><p>Karar al, uygula.</p></article>
+  <article class="fk-card fk-center"><span class="fk-card-num">03</span><h3 class="fk-card-title">İletişim</h3><p>Dünyanın her yerinden.</p></article>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-grid fk-g-3&quot; style=&quot;width:100%&quot;&gt;
+  &lt;article class=&quot;fk-card fk-center&quot;&gt;&lt;span class=&quot;fk-card-num&quot;&gt;01&lt;/span&gt;&lt;h3 class=&quot;fk-card-title&quot;&gt;Simetri&lt;/h3&gt;&lt;p&gt;Her şey yerli yerinde.&lt;/p&gt;&lt;/article&gt;
+  &lt;article class=&quot;fk-card fk-center&quot;&gt;&lt;span class=&quot;fk-card-num&quot;&gt;02&lt;/span&gt;&lt;h3 class=&quot;fk-card-title&quot;&gt;Hız&lt;/h3&gt;&lt;p&gt;Karar al, uygula.&lt;/p&gt;&lt;/article&gt;
+  &lt;article class=&quot;fk-card fk-center&quot;&gt;&lt;span class=&quot;fk-card-num&quot;&gt;03&lt;/span&gt;&lt;h3 class=&quot;fk-card-title&quot;&gt;İletişim&lt;/h3&gt;&lt;p&gt;Dünyanın her yerinden.&lt;/p&gt;&lt;/article&gt;
+&lt;/div&gt;</code></pre></div></figure>
+        </section>
+        <section id="footer" aria-labelledby="footer-t">
+          <h2 id="footer-t"><span class="n">05</span>Footer<a class="anchor" href="#footer" aria-label="Footer bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo is-flush"><footer class="fk-footer" style="padding:0;width:100%">
+  <div class="fk-footer-card">
+    <a class="fk-footer-brand" href="#footer">Furkan <i>Kırcı</i></a>
+    <ul class="fk-footer-links"><li><a href="#footer">Özet</a></li><li><a href="#footer">Hakkımda</a></li><li><a href="#footer">Projeler</a></li><li><a href="#footer">İletişim</a></li></ul>
+    <p class="fk-footer-bottom">© 2026 Furkan Kırcı</p>
+  </div>
+</footer></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;footer class=&quot;fk-footer&quot; style=&quot;padding:0;width:100%&quot;&gt;
+  &lt;div class=&quot;fk-footer-card&quot;&gt;
+    &lt;a class=&quot;fk-footer-brand&quot; href=&quot;#footer&quot;&gt;Furkan &lt;i&gt;Kırcı&lt;/i&gt;&lt;/a&gt;
+    &lt;ul class=&quot;fk-footer-links&quot;&gt;&lt;li&gt;&lt;a href=&quot;#footer&quot;&gt;Özet&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#footer&quot;&gt;Hakkımda&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#footer&quot;&gt;Projeler&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#footer&quot;&gt;İletişim&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+    &lt;p class=&quot;fk-footer-bottom&quot;&gt;© 2026 Furkan Kırcı&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre></div></figure>
+        </section>
+        <section id="hata-404" aria-labelledby="hata-404-t">
+          <h2 id="hata-404-t"><span class="n">06</span>404 sayfası<a class="anchor" href="#hata-404" aria-label="404 sayfası bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo"><section class="fk-center" style="padding:24px 0;width:100%">
+  <p><span class="fk-eyebrow fk-glass">Hata 404</span></p>
+  <h1 class="fk-h1" style="margin-top:18px">Bu sayfa <em>kayıp.</em></h1>
+  <p class="fk-lede" style="margin:20px auto 28px">Muhtemelen o da hızlı bir kararla Bursa’ya taşındı.</p>
+  <a class="fk-btn fk-btn-primary" href="/">Ana sayfaya dön <svg class="fk-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</section></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;section class=&quot;fk-center&quot; style=&quot;padding:24px 0;width:100%&quot;&gt;
+  &lt;p&gt;&lt;span class=&quot;fk-eyebrow fk-glass&quot;&gt;Hata 404&lt;/span&gt;&lt;/p&gt;
+  &lt;h1 class=&quot;fk-h1&quot; style=&quot;margin-top:18px&quot;&gt;Bu sayfa &lt;em&gt;kayıp.&lt;/em&gt;&lt;/h1&gt;
+  &lt;p class=&quot;fk-lede&quot; style=&quot;margin:20px auto 28px&quot;&gt;Muhtemelen o da hızlı bir kararla Bursa’ya taşındı.&lt;/p&gt;
+  &lt;a class=&quot;fk-btn fk-btn-primary&quot; href=&quot;/&quot;&gt;Ana sayfaya dön &lt;svg class=&quot;fk-go&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M5 12h14M13 6l6 6-6 6&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;/section&gt;</code></pre></div></figure>
+          <div class="codeblock"><div class="code-bar"><span class="lang">.htaccess</span><span class="title">.htaccess</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-apache">ErrorDocument 404 /404.html</code></pre></div>
+        </section>
+        <section id="iletisim" aria-labelledby="iletisim-t">
+          <h2 id="iletisim-t"><span class="n">07</span>İletişim kanalları<a class="anchor" href="#iletisim" aria-label="İletişim kanalları bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo"><div class="fk-grid fk-g-3" style="width:100%">
+  <article class="fk-card fk-center"><span class="fk-avatar" style="margin:0 auto 14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></span><span class="fk-mono">E-posta</span><h3 class="fk-card-title" style="margin-top:6px">merhaba@</h3><button type="button" class="fk-btn fk-btn-primary fk-btn-sm" data-fk-copy="merhaba@fkdev.sbs" data-fk-msg="E-posta kopyalandı">Kopyala</button></article>
+  <article class="fk-card fk-center"><span class="fk-avatar" style="margin:0 auto 14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6.5 6.5 0 0 1 3.5 6"/></svg></span><span class="fk-mono">İK</span><h3 class="fk-card-title" style="margin-top:6px">ik@</h3><button type="button" class="fk-btn fk-btn-primary fk-btn-sm" data-fk-copy="ik@fkdev.sbs" data-fk-msg="İK adresi kopyalandı">Kopyala</button></article>
+  <article class="fk-card fk-center"><span class="fk-avatar" style="margin:0 auto 14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M6 9l6-6 6 6M4 20h16"/></svg></span><span class="fk-mono">Dosya</span><h3 class="fk-card-title" style="margin-top:6px">yukle</h3><a class="fk-btn fk-btn-primary fk-btn-sm" href="https://yukle.fkdev.sbs/" rel="noopener">Yükle <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-grid fk-g-3&quot; style=&quot;width:100%&quot;&gt;
+  &lt;article class=&quot;fk-card fk-center&quot;&gt;&lt;span class=&quot;fk-avatar&quot; style=&quot;margin:0 auto 14px&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;rect x=&quot;3&quot; y=&quot;5&quot; width=&quot;18&quot; height=&quot;14&quot; rx=&quot;3&quot;/&gt;&lt;path d=&quot;m4 7 8 6 8-6&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;fk-mono&quot;&gt;E-posta&lt;/span&gt;&lt;h3 class=&quot;fk-card-title&quot; style=&quot;margin-top:6px&quot;&gt;merhaba@&lt;/h3&gt;&lt;button type=&quot;button&quot; class=&quot;fk-btn fk-btn-primary fk-btn-sm&quot; data-fk-copy=&quot;merhaba@fkdev.sbs&quot; data-fk-msg=&quot;E-posta kopyalandı&quot;&gt;Kopyala&lt;/button&gt;&lt;/article&gt;
+  &lt;article class=&quot;fk-card fk-center&quot;&gt;&lt;span class=&quot;fk-avatar&quot; style=&quot;margin:0 auto 14px&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;circle cx=&quot;9&quot; cy=&quot;8&quot; r=&quot;3.5&quot;/&gt;&lt;path d=&quot;M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6.5 6.5 0 0 1 3.5 6&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;fk-mono&quot;&gt;İK&lt;/span&gt;&lt;h3 class=&quot;fk-card-title&quot; style=&quot;margin-top:6px&quot;&gt;ik@&lt;/h3&gt;&lt;button type=&quot;button&quot; class=&quot;fk-btn fk-btn-primary fk-btn-sm&quot; data-fk-copy=&quot;ik@fkdev.sbs&quot; data-fk-msg=&quot;İK adresi kopyalandı&quot;&gt;Kopyala&lt;/button&gt;&lt;/article&gt;
+  &lt;article class=&quot;fk-card fk-center&quot;&gt;&lt;span class=&quot;fk-avatar&quot; style=&quot;margin:0 auto 14px&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M12 16V4M6 9l6-6 6 6M4 20h16&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;fk-mono&quot;&gt;Dosya&lt;/span&gt;&lt;h3 class=&quot;fk-card-title&quot; style=&quot;margin-top:6px&quot;&gt;yukle&lt;/h3&gt;&lt;a class=&quot;fk-btn fk-btn-primary fk-btn-sm&quot; href=&quot;https://yukle.fkdev.sbs/&quot; rel=&quot;noopener&quot;&gt;Yükle &lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M7 17 17 7M8 7h9v9&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/article&gt;
+&lt;/div&gt;</code></pre></div></figure>
+        </section>
+        <section id="sohbet" aria-labelledby="sohbet-t">
+          <h2 id="sohbet-t"><span class="n">08</span>Sohbet arayüzü<a class="anchor" href="#sohbet" aria-label="Sohbet arayüzü bölümüne bağlantı">#</a></h2>
+
+          <p>Yapay zekâ asistanı için hazır sohbet kalıbı. Bu demo gerçek API çağırmaz; gerçek bağlantı için <a class="fk-link" href="/yapay-zeka/#tarayici">Yapay zekâ</a> sayfasına bak.</p>
+          <figure class="ex"><div class="ex-demo is-center"><div class="fk-card" data-chat-demo style="width:100%;max-width:560px">
+  <div class="fk-chat" aria-live="polite">
+    <div class="fk-msg fk-msg-ai">Merhaba! fkdev UI hakkında ne sormak istersin?</div>
+  </div>
+  <form class="fk-input-group" style="margin-top:18px">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 4.8 4.2 8.4 9 9-4.8.6-8.4 4.2-9 9-.6-4.8-4.2-8.4-9-9 4.8-.6 8.4-4.2 9-9Z"/></svg>
+    <input type="text" class="fk-input" placeholder="Bir şey sor…" aria-label="Mesaj" style="padding-right:56px">
+    <button class="fk-btn fk-btn-icon" type="submit" aria-label="Gönder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3 3 10.5l7 2.5 2.5 7L21 3Z"/><path d="m10 13 4-4"/></svg></button>
+  </form>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-card&quot; data-chat-demo style=&quot;width:100%;max-width:560px&quot;&gt;
+  &lt;div class=&quot;fk-chat&quot; aria-live=&quot;polite&quot;&gt;
+    &lt;div class=&quot;fk-msg fk-msg-ai&quot;&gt;Merhaba! fkdev UI hakkında ne sormak istersin?&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;form class=&quot;fk-input-group&quot; style=&quot;margin-top:18px&quot;&gt;
+    &lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M12 3c.6 4.8 4.2 8.4 9 9-4.8.6-8.4 4.2-9 9-.6-4.8-4.2-8.4-9-9 4.8-.6 8.4-4.2 9-9Z&quot;/&gt;&lt;/svg&gt;
+    &lt;input type=&quot;text&quot; class=&quot;fk-input&quot; placeholder=&quot;Bir şey sor…&quot; aria-label=&quot;Mesaj&quot; style=&quot;padding-right:56px&quot;&gt;
+    &lt;button class=&quot;fk-btn fk-btn-icon&quot; type=&quot;submit&quot; aria-label=&quot;Gönder&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M21 3 3 10.5l7 2.5 2.5 7L21 3Z&quot;/&gt;&lt;path d=&quot;m10 13 4-4&quot;/&gt;&lt;/svg&gt;&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</code></pre></div></figure>
+          <div class="fk-table-wrap"><table class="fk-table"><thead><tr><th scope="col">Sınıf / öznitelik</th><th scope="col">Açıklama</th></tr></thead><tbody><tr><td><code>fk-chat</code></td><td>Mesaj listesi</td></tr><tr><td><code>fk-msg fk-msg-user / fk-msg-ai</code></td><td>Kullanıcı / asistan balonu</td></tr><tr><td><code>fk-typing</code></td><td>Yazıyor… üç nokta</td></tr></tbody></table></div>
+        </section>
+        <section id="panel" aria-labelledby="panel-t">
+          <h2 id="panel-t"><span class="n">09</span>Panel parçaları: KPI ve grafik<a class="anchor" href="#panel" aria-label="Panel parçaları: KPI ve grafik bölümüne bağlantı">#</a></h2>
+
+          <p>Yönetim paneli için KPI kartı ve CSS çubuk grafik. Tam panelin kendisi (e-ticaret, CRM, DataTables, giriş/kayıt) ayrı bir sitede: <a class="fk-link" href="https://admin.fkdev.sbs/">admin.fkdev.sbs</a>.</p>
+          <figure class="ex"><div class="ex-demo"><div class="fk-grid fk-g-2" style="width:100%">
+  <div class="fk-kpi"><span>Ciro · bu ay</span><strong>₺284.910</strong><small><b class="fk-up">↑ 12,4%</b> geçen aya göre</small></div>
+  <div class="fk-kpi"><span>Son 12 gün</span><div class="fk-chart" role="img" aria-label="Son 12 günde siparişler"><i style="--h:30;--i:0"></i><i style="--h:52;--i:1"></i><i style="--h:41;--i:2"></i><i style="--h:66;--i:3"></i><i style="--h:58;--i:4"></i><i style="--h:80;--i:5"></i><i style="--h:47;--i:6"></i><i style="--h:72;--i:7"></i><i style="--h:90;--i:8"></i><i style="--h:64;--i:9"></i><i style="--h:76;--i:10"></i><i style="--h:100;--i:11" class="is-hi"></i></div></div>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-grid fk-g-2&quot; style=&quot;width:100%&quot;&gt;
+  &lt;div class=&quot;fk-kpi&quot;&gt;&lt;span&gt;Ciro · bu ay&lt;/span&gt;&lt;strong&gt;₺284.910&lt;/strong&gt;&lt;small&gt;&lt;b class=&quot;fk-up&quot;&gt;↑ 12,4%&lt;/b&gt; geçen aya göre&lt;/small&gt;&lt;/div&gt;
+  &lt;div class=&quot;fk-kpi&quot;&gt;&lt;span&gt;Son 12 gün&lt;/span&gt;&lt;div class=&quot;fk-chart&quot; role=&quot;img&quot; aria-label=&quot;Son 12 günde siparişler&quot;&gt;&lt;i style=&quot;--h:30;--i:0&quot;&gt;&lt;/i&gt;&lt;i style=&quot;--h:52;--i:1&quot;&gt;&lt;/i&gt;&lt;i style=&quot;--h:41;--i:2&quot;&gt;&lt;/i&gt;&lt;i style=&quot;--h:66;--i:3&quot;&gt;&lt;/i&gt;&lt;i style=&quot;--h:58;--i:4&quot;&gt;&lt;/i&gt;&lt;i style=&quot;--h:80;--i:5&quot;&gt;&lt;/i&gt;&lt;i style=&quot;--h:47;--i:6&quot;&gt;&lt;/i&gt;&lt;i style=&quot;--h:72;--i:7&quot;&gt;&lt;/i&gt;&lt;i style=&quot;--h:90;--i:8&quot;&gt;&lt;/i&gt;&lt;i style=&quot;--h:64;--i:9&quot;&gt;&lt;/i&gt;&lt;i style=&quot;--h:76;--i:10&quot;&gt;&lt;/i&gt;&lt;i style=&quot;--h:100;--i:11&quot; class=&quot;is-hi&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div></figure>
+          <div class="fk-table-wrap"><table class="fk-table"><thead><tr><th scope="col">Sınıf / öznitelik</th><th scope="col">Açıklama</th></tr></thead><tbody><tr><td><code>fk-kpi</code></td><td>Tek sayı kartı; <code>span</code> etiket, <code>strong</code> değer, <code>small</code> karşılaştırma</td></tr><tr><td><code>fk-up / fk-down</code></td><td>Yeşil artış / kırmızı düşüş</td></tr><tr><td><code>fk-chart &gt; i + --h</code></td><td>Çubuk grafik; <code>--h</code> 0–100, en yüksek çubuğa <code>is-hi</code></td></tr><tr><td><code>fk-dash</code></td><td>Yan menülü panel iskeleti (isteğe bağlı)</td></tr></tbody></table></div>
+          <div class="fk-cluster"><a class="fk-btn fk-btn-primary" href="https://admin.fkdev.sbs/">admin.fkdev.sbs’e git <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+        </section>
+      </div>
+      <nav class="pager" aria-label="Sayfalar arası"><a class="prev" href="/hareket/"><span>← Önceki</span><b>Hareket &amp; JS</b></a><a class="next" href="/veritabani/"><span>Sonraki →</span><b>Veritabanı</b></a></nav>
+    </main>
+    <aside class="docs-toc" aria-label="Bu sayfada"><p>Bu sayfada</p><ul><li><a href="#hero">Hero</a></li><li><a href="#sayfa-basi">Sayfa başı ve breadcrumb</a></li><li><a href="#cta">CTA bandı</a></li><li><a href="#ozellikler">Özellik ızgarası</a></li><li><a href="#footer">Footer</a></li><li><a href="#hata-404">404 sayfası</a></li><li><a href="#iletisim">İletişim kanalları</a></li><li><a href="#sohbet">Sohbet arayüzü</a></li><li><a href="#panel">Panel parçaları: KPI ve grafik</a></li></ul></aside>
+  </div>
+  <footer class="fk-fc-wrap">
+    <div class="fk-fc">
+      <a class="fk-fc-brand" href="/">fkdev <i>UI</i></a>
+      <p class="fk-fc-tag">Tasarım sistemi · CDN · v2.4.1</p>
+      <ul class="fk-fc-social"><li><a href="https://linkedin.com/in/furkankirci" target="_blank" rel="noopener me" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm6.5 0h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75V21h-4V9.5Z"/></svg></a></li><li><a href="https://github.com/furkankirci" target="_blank" rel="noopener me" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a></li><li><a href="https://x.com/furkankirci" target="_blank" rel="noopener me" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.78L17.75 3Zm-1.08 16.2h1.7L7.4 4.73H5.57l11.1 14.47Z"/></svg></a></li><li><a href="https://medium.com/@furkankirci" target="_blank" rel="noopener me" aria-label="Medium"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 12a6.75 6.75 0 1 1-13.5 0 6.75 6.75 0 0 1 13.5 0Zm7.4 0c0 3.5-1.5 6.36-3.37 6.36S14.16 15.5 14.16 12s1.51-6.36 3.37-6.36S20.9 8.5 20.9 12ZM24 12c0 3.13-.53 5.68-1.18 5.68s-1.18-2.55-1.18-5.68.53-5.68 1.18-5.68S24 8.87 24 12Z"/></svg></a></li></ul>
+      <nav class="fk-fc-nav" aria-label="Alt menü"><ul><li><a href="/">Genel bakış</a></li><li><a href="/baslangic/">Kurulum</a></li><li><a href="/cdn/">CDN</a></li><li><a href="/temeller/">Temeller</a></li><li><a href="/bilesenler/">Bileşenler A–Z</a></li><li><a href="/formlar/">Formlar</a></li><li><a href="/hareket/">Hareket &amp; JS</a></li><li><a href="/kaliplar/">Kalıplar</a></li><li><a href="/veritabani/">Veritabanı</a></li><li><a href="/entegrasyon/">Framework &amp; PHP</a></li><li><a href="/yapay-zeka/">Yapay zekâ</a></li><li><a href="/yayin/">SEO, güvenlik, yayın</a></li><li><a href="/surumler/">Sürüm notları</a></li><li><a href="/sozluk/">Sözlük A–Z</a></li><li><a href="https://admin.fkdev.sbs/">Admin ↗</a></li></ul></nav>
+      <ul class="fk-fc-contact">
+        <li><button type="button" data-fk-copy="fkdevs" data-fk-msg="WhatsApp kullanıcı adı kopyalandı: fkdevs"><span class="fk-fc-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></span>fkdevs</button></li>
+        <li><a href="mailto:merhaba@fkdev.sbs"><span class="fk-fc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></span>merhaba@fkdev.sbs</a></li>
+        <li><a href="mailto:ik@fkdev.sbs"><span class="fk-fc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>ik@fkdev.sbs</a></li>
+        <li><a href="https://yukle.fkdev.sbs/" target="_blank" rel="noopener"><span class="fk-fc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M6 9l6-6 6 6M4 20h16"/></svg></span>yukle.fkdev.sbs</a></li>
+      </ul>
+      <nav class="fk-fc-eco" aria-label="fkdev ekosistemi"><a href="https://www.fkdev.sbs/">fkdev.sbs</a><a href="https://ui.fkdev.sbs/" aria-current="true">ui.fkdev.sbs</a><a href="https://admin.fkdev.sbs/">admin.fkdev.sbs</a></nav>
+      <div class="fk-fc-bottom">
+        <p>© 2026 Furkan Kırcı · MIT</p>
+        <p class="fk-fc-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Bursa · Nerede isterseniz</p>
+        <button class="fk-fc-top" type="button" data-fk-top>Başa dön <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+      </div>
+    </div>
+  </footer>
+  <dialog class="search-dlg" id="search" aria-labelledby="search-t"><h2 class="fk-sr" id="search-t">Dokümantasyonda ara</h2>
+    <div class="search-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" placeholder="Bileşen, sınıf ya da konu ara…" aria-label="Arama" autocomplete="off"><span class="fk-kbd">Esc</span></div>
+    <ul class="search-res"></ul>
+    <div class="search-foot"><span><span class="fk-kbd">↑</span> <span class="fk-kbd">↓</span> gezin</span><span><span class="fk-kbd">Enter</span> aç</span></div>
+  </dialog>
+  <script src="/v2.4.1/fkdev-ui.min.js" defer></script>
+  <script src="/assets/docs.js" defer></script>
+</body>
+</html>

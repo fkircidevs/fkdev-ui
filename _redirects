@@ -1,0 +1,2 @@
+/dashboard https://admin.fkdev.sbs/ 301
+/dashboard/* https://admin.fkdev.sbs/ 301

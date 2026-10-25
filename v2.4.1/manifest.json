@@ -1,0 +1,67 @@
+{
+  "name": "fkdev-ui",
+  "version": "2.4.1",
+  "released": "2026-10-24",
+  "license": "MIT",
+  "author": "Furkan Kırcı",
+  "homepage": "https://ui.fkdev.sbs",
+  "files": [
+    {
+      "file": "fkdev-ui.min.css",
+      "url": "https://ui.fkdev.sbs/v2.4.1/fkdev-ui.min.css",
+      "bytes": 63587,
+      "gzip": 12244,
+      "brotli": 10635,
+      "integrity": "sha384-ywbvrnvLBhspdz061sb4+HVmL4bAnbhyuwKyDq0qCBVdEeLw2Le+aT+M0XhiumnM"
+    },
+    {
+      "file": "fkdev-ui.min.js",
+      "url": "https://ui.fkdev.sbs/v2.4.1/fkdev-ui.min.js",
+      "bytes": 22284,
+      "gzip": 6819,
+      "brotli": 6128,
+      "integrity": "sha384-M00Zh34vyulzgDN4UvQcDJteSAYjql+zh1KP3B8lMfPikmAoJLDzbKnjWiFHPsvT"
+    },
+    {
+      "file": "fkdev-icons.css",
+      "url": "https://ui.fkdev.sbs/v2.4.1/fkdev-icons.css",
+      "bytes": 4346,
+      "gzip": 991,
+      "brotli": 837,
+      "integrity": "sha384-7yUKhYWWrNB988JPR7B5hWqmWKk50ryeZ/b688YUSNn02PjgfTkhgNDnoRUX0w4V"
+    },
+    {
+      "file": "fkdev-ui.css",
+      "url": "https://ui.fkdev.sbs/v2.4.1/fkdev-ui.css",
+      "bytes": 71391,
+      "gzip": 13047,
+      "brotli": 10983,
+      "integrity": "sha384-JVmzqXKG5T0Spda/kqFEtl84K2yIz+IXdAj/MuBo5gxjxv0vlefiB1Myg8tanVYS"
+    },
+    {
+      "file": "fkdev-ui.js",
+      "url": "https://ui.fkdev.sbs/v2.4.1/fkdev-ui.js",
+      "bytes": 32239,
+      "gzip": 8381,
+      "brotli": 7471,
+      "integrity": "sha384-Ykaftl5KRG4zT/LxnLY6OKIDvuG0a4Q/pjThVqf36U0ejvfJDS4/3Yk7Rh6GsP6K"
+    },
+    {
+      "file": "fkdev-tokens.json",
+      "url": "https://ui.fkdev.sbs/v2.4.1/fkdev-tokens.json",
+      "bytes": 3361,
+      "gzip": 892,
+      "brotli": 777,
+      "integrity": "sha384-L1taGHSKlfcTmuVrgNZnWSqCUN1vaWqcohuicyj0KOhR+MLYnEltsa2v+b9XVsve"
+    },
+    {
+      "file": "icons.json",
+      "url": "https://ui.fkdev.sbs/v2.4.1/icons.json",
+      "bytes": 23441,
+      "gzip": 3368,
+      "brotli": 3030,
+      "integrity": "sha384-74Gw6g1AGEZFL8zhuz/N30PXik0ckVkfAu6b40I3uEr8KMf9W570IOh/AHptlXVN"
+    }
+  ],
+  "icons": 95
+}

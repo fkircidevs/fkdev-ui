@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script>(function(d){var r=d.documentElement;r.classList.add('js');try{var t=localStorage.getItem('fk-theme');if(t==='dark'||t==='light')r.setAttribute('data-theme',t)}catch(e){}})(document)</script>
+  <title>Formlar, Alanlar ve Doğrulama — fkdev UI</title>
+  <meta name="description" content="fkdev UI form yapısı: alan düzeni, input, ikonlu input, şifre, select, textarea, checkbox, radio, switch, range, dosya yükleme, JS doğrulama ve PHP ile form işleme örneği.">
+  <meta name="keywords" content="fkdev ui, tasarım sistemi, css kütüphanesi, liquid glass, furkan kırcı">
+  <meta name="author" content="Furkan Kırcı">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#f4f4f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#050505" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://ui.fkdev.sbs/formlar/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="fkdev UI">
+  <meta property="og:url" content="https://ui.fkdev.sbs/formlar/">
+  <meta property="og:title" content="Formlar, Alanlar ve Doğrulama — fkdev UI">
+  <meta property="og:description" content="fkdev UI form yapısı: alan düzeni, input, ikonlu input, şifre, select, textarea, checkbox, radio, switch, range, dosya yükleme, JS doğrulama ve PHP ile form işleme örneği.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Formlar, Alanlar ve Doğrulama — fkdev UI">
+  <meta name="twitter:description" content="fkdev UI form yapısı: alan düzeni, input, ikonlu input, şifre, select, textarea, checkbox, radio, switch, range, dosya yükleme, JS doğrulama ve PHP ile form işleme örneği.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&amp;family=Geist:wght@300..700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/v2.4.1/fkdev-ui.min.css">
+  <link rel="stylesheet" href="/assets/docs.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://ui.fkdev.sbs/#website","url":"https://ui.fkdev.sbs/","name":"fkdev UI","inLanguage":"tr-TR","publisher":{"@type":"Person","name":"Furkan Kırcı","url":"https://www.fkdev.sbs/"}},{"@type":"TechArticle","@id":"https://ui.fkdev.sbs/formlar/#page","url":"https://ui.fkdev.sbs/formlar/","headline":"Formlar, Alanlar ve Doğrulama — fkdev UI","name":"Formlar, Alanlar ve Doğrulama — fkdev UI","description":"fkdev UI form yapısı: alan düzeni, input, ikonlu input, şifre, select, textarea, checkbox, radio, switch, range, dosya yükleme, JS doğrulama ve PHP ile form işleme örneği.","inLanguage":"tr-TR","dateModified":"2026-10-24","isPartOf":{"@id":"https://ui.fkdev.sbs/#website"},"author":{"@type":"Person","name":"Furkan Kırcı","url":"https://www.fkdev.sbs/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"fkdev UI","item":"https://ui.fkdev.sbs/"},{"@type":"ListItem","position":2,"name":"Formlar","item":"https://ui.fkdev.sbs/formlar/"}]}]}</script>
+</head>
+<body class="fk-body fk-atmosphere">
+  <div class="fk-readbar" aria-hidden="true"></div>
+  <a class="skip" href="#icerik">İçeriğe atla</a>
+  <header class="fk-navbar" data-fk-autohide>
+    <div class="fk-navbar-in fk-glass">
+      <a class="fk-brand" href="/" aria-label="fkdev UI ana sayfa"><b>fkdev <i>UI</i></b><small>v2.4.1</small></a>
+      <nav class="fk-tabsbar" aria-label="Ana bölümler"><span class="fk-tabsbar-ind" aria-hidden="true"></span><a href="/bilesenler/">Bileşenler</a><a href="/formlar/" aria-current="page">Formlar</a><a href="/cdn/">CDN</a><a href="/yapay-zeka/">Yapay zekâ</a><a href="https://admin.fkdev.sbs/">Dashboard ↗</a></nav>
+      <div class="fk-navbar-tools">
+        <button class="docs-search-btn" type="button" data-search aria-label="Dokümantasyonda ara"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="t">Ara</span><span class="fk-kbd">Ctrl K</span></button>
+        <button class="fk-btn-icon fk-btn" type="button" data-fk-theme-toggle aria-label="Temayı değiştir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fk-i-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="fk-i-moon"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+        <button class="fk-btn fk-btn-icon fk-burger" type="button" data-fk-menu="#fk-menu" aria-label="Menüyü aç"><svg class="fk-i-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg><svg class="fk-i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+    </div>
+  </header>
+  <div class="fk-menu" id="fk-menu">
+    <div class="fk-menu-in">
+      <nav aria-label="Dokümantasyon sayfaları">
+        <div class="fk-menu-list">
+          <a href="/" style="--i:0">Genel bakış <span>01</span></a>
+          <a href="/baslangic/" style="--i:1">Kurulum <span>02</span></a>
+          <a href="/cdn/" style="--i:2">CDN <span>03</span></a>
+          <a href="/temeller/" style="--i:3">Temeller <span>04</span></a>
+          <a href="/bilesenler/" style="--i:4">Bileşenler A–Z <span>05</span></a>
+          <a href="/formlar/" style="--i:5" aria-current="page">Formlar <span>06</span></a>
+          <a href="/hareket/" style="--i:6">Hareket &amp; JS <span>07</span></a>
+          <a href="/kaliplar/" style="--i:7">Kalıplar <span>08</span></a>
+          <a href="/veritabani/" style="--i:8">Veritabanı <span>09</span></a>
+          <a href="/entegrasyon/" style="--i:9">Framework &amp; PHP <span>10</span></a>
+          <a href="/yapay-zeka/" style="--i:10">Yapay zekâ <span>11</span></a>
+          <a href="/yayin/" style="--i:11">SEO, güvenlik, yayın <span>12</span></a>
+          <a href="/surumler/" style="--i:12">Sürüm notları <span>13</span></a>
+          <a href="/sozluk/" style="--i:13">Sözlük A–Z <span>14</span></a>
+          <a href="https://admin.fkdev.sbs/" style="--i:14" rel="noopener">Admin Dashboard ↗ <span>15</span></a>
+          <a href="https://www.fkdev.sbs/" style="--i:15" rel="noopener">fkdev.sbs ↗ <span>16</span></a>
+        </div>
+      </nav>
+      <div class="fk-menu-foot"><a href="https://www.fkdev.sbs/">fkdev.sbs</a><a href="https://ui.fkdev.sbs/" aria-current="true">ui.fkdev.sbs</a><a href="https://admin.fkdev.sbs/">admin.fkdev.sbs</a><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>fkdevs</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg>ik@fkdev.sbs</span></div>
+    </div>
+  </div>
+  <div class="docs-shell">
+    <main class="docs-main" id="icerik">
+
+      <header class="doc-head">
+        <nav class="fk-crumbs fk-glass" aria-label="Sayfa yolu"><ol><li><a href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>fkdev UI</span></a></li><li class="fk-sep" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></li><li><span aria-current="page">Formlar</span></li></ol></nav>
+        <p><span class="fk-eyebrow fk-glass">Formlar · Alanlar ve doğrulama</span></p>
+        <h1>Formlar, <em>sürtünmesiz.</em></h1>
+        <p class="fk-lede">Her alan aynı yapıyı izler: etiket, alan, ipucu ve hata. Doğrulama tarayıcının yerleşik kurallarını kullanır, mesajları Türkçeleştirir.</p>
+
+      </header>
+      <div class="doc">
+        <section id="yapi" aria-labelledby="yapi-t">
+          <h2 id="yapi-t"><span class="n">01</span>Alan yapısı<a class="anchor" href="#yapi" aria-label="Alan yapısı bölümüne bağlantı">#</a></h2>
+
+          <p>Her alan bir <code>fk-field</code> içinde durur. Etiket <code>for</code> ile alana bağlanır; hata mesajı <code>fk-error</code> içinde gösterilir.</p>
+          <figure class="ex"><div class="ex-demo is-center"><div class="fk-field" style="width:100%;max-width:420px">
+  <label class="fk-label" for="f-ad">Ad Soyad <span class="fk-req">*</span></label>
+  <input type="text" class="fk-input" id="f-ad" name="ad" placeholder="Furkan Kırcı" required>
+  <span class="fk-hint">Faturada görünecek ad.</span>
+  <span class="fk-error" role="alert"></span>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-field&quot; style=&quot;width:100%;max-width:420px&quot;&gt;
+  &lt;label class=&quot;fk-label&quot; for=&quot;f-ad&quot;&gt;Ad Soyad &lt;span class=&quot;fk-req&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+  &lt;input type=&quot;text&quot; class=&quot;fk-input&quot; id=&quot;f-ad&quot; name=&quot;ad&quot; placeholder=&quot;Furkan Kırcı&quot; required&gt;
+  &lt;span class=&quot;fk-hint&quot;&gt;Faturada görünecek ad.&lt;/span&gt;
+  &lt;span class=&quot;fk-error&quot; role=&quot;alert&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre></div></figure>
+          <div class="fk-table-wrap"><table class="fk-table"><thead><tr><th scope="col">Sınıf / öznitelik</th><th scope="col">Açıklama</th></tr></thead><tbody><tr><td><code>fk-form</code></td><td>Alanları 20px aralıkla dizen ızgara</td></tr><tr><td><code>fk-form-row</code></td><td>Yan yana 2 alan; telefonda alt alta</td></tr><tr><td><code>fk-field</code></td><td>Tek alanın kapsayıcısı; hata durumunda <code>is-invalid</code> alır</td></tr><tr><td><code>fk-label / fk-req</code></td><td>Etiket / zorunlu yıldızı</td></tr><tr><td><code>fk-hint / fk-error</code></td><td>Yardım metni / hata metni</td></tr></tbody></table></div>
+        </section>
+        <section id="input" aria-labelledby="input-t">
+          <h2 id="input-t"><span class="n">02</span>Input, select ve textarea<a class="anchor" href="#input" aria-label="Input, select ve textarea bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo"><div class="fk-form" style="width:100%">
+  <div class="fk-form-row">
+    <div class="fk-field"><label class="fk-label" for="f-mail">E-posta</label><input class="fk-input" id="f-mail" type="email" placeholder="ornek@mail.com"></div>
+    <div class="fk-field"><label class="fk-label" for="f-konu">Konu</label><select class="fk-select" id="f-konu"><option>Proje</option><option>İş başvurusu</option><option>Diğer</option></select></div>
+  </div>
+  <div class="fk-field"><label class="fk-label" for="f-mesaj">Mesaj</label><textarea class="fk-textarea" id="f-mesaj" placeholder="Kısaca anlat…"></textarea></div>
+  <div class="fk-field"><label class="fk-label" for="f-pasif">Pasif alan</label><input type="text" class="fk-input" id="f-pasif" value="Değiştirilemez" disabled></div>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-form&quot; style=&quot;width:100%&quot;&gt;
+  &lt;div class=&quot;fk-form-row&quot;&gt;
+    &lt;div class=&quot;fk-field&quot;&gt;&lt;label class=&quot;fk-label&quot; for=&quot;f-mail&quot;&gt;E-posta&lt;/label&gt;&lt;input class=&quot;fk-input&quot; id=&quot;f-mail&quot; type=&quot;email&quot; placeholder=&quot;ornek@mail.com&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;fk-field&quot;&gt;&lt;label class=&quot;fk-label&quot; for=&quot;f-konu&quot;&gt;Konu&lt;/label&gt;&lt;select class=&quot;fk-select&quot; id=&quot;f-konu&quot;&gt;&lt;option&gt;Proje&lt;/option&gt;&lt;option&gt;İş başvurusu&lt;/option&gt;&lt;option&gt;Diğer&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;fk-field&quot;&gt;&lt;label class=&quot;fk-label&quot; for=&quot;f-mesaj&quot;&gt;Mesaj&lt;/label&gt;&lt;textarea class=&quot;fk-textarea&quot; id=&quot;f-mesaj&quot; placeholder=&quot;Kısaca anlat…&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+  &lt;div class=&quot;fk-field&quot;&gt;&lt;label class=&quot;fk-label&quot; for=&quot;f-pasif&quot;&gt;Pasif alan&lt;/label&gt;&lt;input type=&quot;text&quot; class=&quot;fk-input&quot; id=&quot;f-pasif&quot; value=&quot;Değiştirilemez&quot; disabled&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div></figure>
+        </section>
+        <section id="gruplar" aria-labelledby="gruplar-t">
+          <h2 id="gruplar-t"><span class="n">03</span>İkonlu alan ve şifre<a class="anchor" href="#gruplar" aria-label="İkonlu alan ve şifre bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo is-center"><div class="fk-form" style="width:100%;max-width:420px">
+  <div class="fk-field">
+    <label class="fk-label" for="f-ara">Ara</label>
+    <div class="fk-input-group"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input class="fk-input" id="f-ara" type="search" placeholder="Dosya ara…"></div>
+  </div>
+  <div class="fk-field">
+    <label class="fk-label" for="f-sifre">Şifre</label>
+    <div class="fk-input-group"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><input class="fk-input" id="f-sifre" type="password" value="gizli1234"><button class="fk-btn fk-btn-icon" type="button" data-fk-password aria-label="Şifreyi göster"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+  </div>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-form&quot; style=&quot;width:100%;max-width:420px&quot;&gt;
+  &lt;div class=&quot;fk-field&quot;&gt;
+    &lt;label class=&quot;fk-label&quot; for=&quot;f-ara&quot;&gt;Ara&lt;/label&gt;
+    &lt;div class=&quot;fk-input-group&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;circle cx=&quot;11&quot; cy=&quot;11&quot; r=&quot;7&quot;/&gt;&lt;path d=&quot;m20 20-3.5-3.5&quot;/&gt;&lt;/svg&gt;&lt;input class=&quot;fk-input&quot; id=&quot;f-ara&quot; type=&quot;search&quot; placeholder=&quot;Dosya ara…&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;fk-field&quot;&gt;
+    &lt;label class=&quot;fk-label&quot; for=&quot;f-sifre&quot;&gt;Şifre&lt;/label&gt;
+    &lt;div class=&quot;fk-input-group&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;rect x=&quot;5&quot; y=&quot;11&quot; width=&quot;14&quot; height=&quot;10&quot; rx=&quot;2.5&quot;/&gt;&lt;path d=&quot;M8 11V8a4 4 0 0 1 8 0v3&quot;/&gt;&lt;/svg&gt;&lt;input class=&quot;fk-input&quot; id=&quot;f-sifre&quot; type=&quot;password&quot; value=&quot;gizli1234&quot;&gt;&lt;button class=&quot;fk-btn fk-btn-icon&quot; type=&quot;button&quot; data-fk-password aria-label=&quot;Şifreyi göster&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z&quot;/&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;3&quot;/&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></figure>
+          <div class="fk-table-wrap"><table class="fk-table"><thead><tr><th scope="col">Sınıf / öznitelik</th><th scope="col">Açıklama</th></tr></thead><tbody><tr><td><code>fk-input-group</code></td><td>Soldaki SVG ikonu ve sağdaki butonu alanın içine yerleştirir</td></tr><tr><td><code>data-fk-password</code></td><td>Şifreyi göster/gizle</td></tr></tbody></table></div>
+        </section>
+        <section id="boyutlar" aria-labelledby="boyutlar-t">
+          <h2 id="boyutlar-t"><span class="n">04</span>Boyutlar, ön ek ve kopyalama alanı<a class="anchor" href="#boyutlar" aria-label="Boyutlar, ön ek ve kopyalama alanı bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo is-center"><div class="fk-form" style="width:100%;max-width:520px">
+  <input type="text" class="fk-input fk-input-sm" placeholder="Küçük alan" aria-label="Küçük alan">
+  <input type="text" class="fk-input" placeholder="Normal alan" aria-label="Normal alan">
+  <input type="text" class="fk-input fk-input-lg" placeholder="Büyük alan" aria-label="Büyük alan">
+  <div class="fk-field">
+    <label class="fk-label" for="f-sub">Alt alan adı</label>
+    <div class="fk-affix"><span>https://</span><input type="text" class="fk-input" id="f-sub" placeholder="projem"><span>.fkdev.sbs</span></div>
+  </div>
+  <div class="fk-copyfield">
+    <input type="text" id="f-cdn" value="https://ui.fkdev.sbs/v2.4.1/fkdev-ui.min.css" readonly aria-label="CDN adresi">
+    <button type="button" class="fk-btn fk-btn-primary fk-btn-sm" data-fk-copy="#f-cdn" data-fk-msg="CDN adresi kopyalandı"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button>
+  </div>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-form&quot; style=&quot;width:100%;max-width:520px&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;fk-input fk-input-sm&quot; placeholder=&quot;Küçük alan&quot; aria-label=&quot;Küçük alan&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;fk-input&quot; placeholder=&quot;Normal alan&quot; aria-label=&quot;Normal alan&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;fk-input fk-input-lg&quot; placeholder=&quot;Büyük alan&quot; aria-label=&quot;Büyük alan&quot;&gt;
+  &lt;div class=&quot;fk-field&quot;&gt;
+    &lt;label class=&quot;fk-label&quot; for=&quot;f-sub&quot;&gt;Alt alan adı&lt;/label&gt;
+    &lt;div class=&quot;fk-affix&quot;&gt;&lt;span&gt;https://&lt;/span&gt;&lt;input type=&quot;text&quot; class=&quot;fk-input&quot; id=&quot;f-sub&quot; placeholder=&quot;projem&quot;&gt;&lt;span&gt;.fkdev.sbs&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;fk-copyfield&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;f-cdn&quot; value=&quot;https://ui.fkdev.sbs/v2.4.1/fkdev-ui.min.css&quot; readonly aria-label=&quot;CDN adresi&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;fk-btn fk-btn-primary fk-btn-sm&quot; data-fk-copy=&quot;#f-cdn&quot; data-fk-msg=&quot;CDN adresi kopyalandı&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;rect x=&quot;9&quot; y=&quot;9&quot; width=&quot;11&quot; height=&quot;11&quot; rx=&quot;2.5&quot;/&gt;&lt;path d=&quot;M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9&quot;/&gt;&lt;/svg&gt;Kopyala&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></figure>
+          <div class="fk-table-wrap"><table class="fk-table"><thead><tr><th scope="col">Sınıf / öznitelik</th><th scope="col">Açıklama</th></tr></thead><tbody><tr><td><code>fk-input-sm / fk-input-lg</code></td><td>Küçük ve büyük alan</td></tr><tr><td><code>fk-affix</code></td><td>Alanın önüne/arkasına sabit metin (birim, alan adı, para birimi)</td></tr><tr><td><code>fk-copyfield</code></td><td>Salt okunur değer + kopyala butonu; <code>data-fk-copy="#id"</code> alanın değerini kopyalar</td></tr></tbody></table></div>
+        </section>
+        <section id="sayac" aria-labelledby="sayac-t">
+          <h2 id="sayac-t"><span class="n">05</span>Karakter sayacı<a class="anchor" href="#sayac" aria-label="Karakter sayacı bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo is-center"><div class="fk-field" data-fk-counter style="width:100%;max-width:520px">
+  <label class="fk-label" for="f-bio">Kısa biyografi</label>
+  <textarea class="fk-textarea" id="f-bio" maxlength="160" placeholder="160 karakterde kendini anlat…"></textarea>
+  <span class="fk-counter"></span>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-field&quot; data-fk-counter style=&quot;width:100%;max-width:520px&quot;&gt;
+  &lt;label class=&quot;fk-label&quot; for=&quot;f-bio&quot;&gt;Kısa biyografi&lt;/label&gt;
+  &lt;textarea class=&quot;fk-textarea&quot; id=&quot;f-bio&quot; maxlength=&quot;160&quot; placeholder=&quot;160 karakterde kendini anlat…&quot;&gt;&lt;/textarea&gt;
+  &lt;span class=&quot;fk-counter&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre></div></figure>
+          <p>Alanı kapsayan öğeye <code>data-fk-counter</code> ekle; sınır <code>maxlength</code>’ten okunur. Sınırın %90’ında sayaç sarıya, sınırda kırmızıya döner.</p>
+        </section>
+        <section id="otp" aria-labelledby="otp-t">
+          <h2 id="otp-t"><span class="n">06</span>Doğrulama kodu (OTP)<a class="anchor" href="#otp" aria-label="Doğrulama kodu (OTP) bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo is-center"><div class="fk-otp" role="group" aria-label="6 haneli doğrulama kodu">
+  <input type="text" aria-label="1. hane"><input type="text" aria-label="2. hane"><input type="text" aria-label="3. hane"><input type="text" aria-label="4. hane"><input type="text" aria-label="5. hane"><input type="text" aria-label="6. hane">
+  <input type="hidden" name="kod">
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-otp&quot; role=&quot;group&quot; aria-label=&quot;6 haneli doğrulama kodu&quot;&gt;
+  &lt;input type=&quot;text&quot; aria-label=&quot;1. hane&quot;&gt;&lt;input type=&quot;text&quot; aria-label=&quot;2. hane&quot;&gt;&lt;input type=&quot;text&quot; aria-label=&quot;3. hane&quot;&gt;&lt;input type=&quot;text&quot; aria-label=&quot;4. hane&quot;&gt;&lt;input type=&quot;text&quot; aria-label=&quot;5. hane&quot;&gt;&lt;input type=&quot;text&quot; aria-label=&quot;6. hane&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;kod&quot;&gt;
+&lt;/div&gt;</code></pre></div></figure>
+          <p>Yazınca sonraki kutuya geçer, silince geri döner, yapıştırılan kodu kutulara dağıtır, telefonda SMS kodunu otomatik önerir. Tüm haneler dolunca <code>fk:complete</code> olayı tetiklenir ve kod gizli alana yazılır.</p>
+          <div class="codeblock"><div class="code-bar"><span class="lang">JavaScript</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-js">document.querySelector('.fk-otp').addEventListener('fk:complete', (e) =&gt; {
+  fetch('/api/dogrula', { method: 'POST', body: new URLSearchParams({ kod: e.detail.value }) });
+});</code></pre></div>
+        </section>
+        <section id="stepper" aria-labelledby="stepper-t">
+          <h2 id="stepper-t"><span class="n">07</span>Sayı seçici (stepper)<a class="anchor" href="#stepper" aria-label="Sayı seçici (stepper) bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo is-center"><div class="fk-stepper">
+  <button type="button" aria-label="Azalt">−</button>
+  <input type="number" value="1" min="1" max="10" aria-label="Adet">
+  <button type="button" aria-label="Artır">+</button>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-stepper&quot;&gt;
+  &lt;button type=&quot;button&quot; aria-label=&quot;Azalt&quot;&gt;−&lt;/button&gt;
+  &lt;input type=&quot;number&quot; value=&quot;1&quot; min=&quot;1&quot; max=&quot;10&quot; aria-label=&quot;Adet&quot;&gt;
+  &lt;button type=&quot;button&quot; aria-label=&quot;Artır&quot;&gt;+&lt;/button&gt;
+&lt;/div&gt;</code></pre></div></figure>
+          <p><code>min</code>, <code>max</code> ve <code>step</code> öznitelikleri dikkate alınır; değişince <code>change</code> olayı tetiklenir.</p>
+        </section>
+        <section id="etiketler" aria-labelledby="etiketler-t">
+          <h2 id="etiketler-t"><span class="n">08</span>Etiket girişi<a class="anchor" href="#etiketler" aria-label="Etiket girişi bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo is-center"><div class="fk-field" style="width:100%;max-width:520px">
+  <label class="fk-label" for="f-tags">Yetkinlikler</label>
+  <div class="fk-tags" data-fk-tags>
+    <span class="fk-tag">React<button type="button" class="fk-tag-x" aria-label="React etiketini kaldır">&times;</button></span>
+    <span class="fk-tag">Node.js<button type="button" class="fk-tag-x" aria-label="Node.js etiketini kaldır">&times;</button></span>
+    <input type="text" id="f-tags" placeholder="Yaz ve Enter’a bas…">
+    <input type="hidden" name="yetkinlikler">
+  </div>
+  <span class="fk-hint">Enter ya da virgül ile ekle, Backspace ile sonuncuyu sil.</span>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-field&quot; style=&quot;width:100%;max-width:520px&quot;&gt;
+  &lt;label class=&quot;fk-label&quot; for=&quot;f-tags&quot;&gt;Yetkinlikler&lt;/label&gt;
+  &lt;div class=&quot;fk-tags&quot; data-fk-tags&gt;
+    &lt;span class=&quot;fk-tag&quot;&gt;React&lt;button type=&quot;button&quot; class=&quot;fk-tag-x&quot; aria-label=&quot;React etiketini kaldır&quot;&gt;&amp;times;&lt;/button&gt;&lt;/span&gt;
+    &lt;span class=&quot;fk-tag&quot;&gt;Node.js&lt;button type=&quot;button&quot; class=&quot;fk-tag-x&quot; aria-label=&quot;Node.js etiketini kaldır&quot;&gt;&amp;times;&lt;/button&gt;&lt;/span&gt;
+    &lt;input type=&quot;text&quot; id=&quot;f-tags&quot; placeholder=&quot;Yaz ve Enter’a bas…&quot;&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;yetkinlikler&quot;&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;fk-hint&quot;&gt;Enter ya da virgül ile ekle, Backspace ile sonuncuyu sil.&lt;/span&gt;
+&lt;/div&gt;</code></pre></div></figure>
+        </section>
+        <section id="secimler" aria-labelledby="secimler-t">
+          <h2 id="secimler-t"><span class="n">09</span>Checkbox, radio, switch, range<a class="anchor" href="#secimler" aria-label="Checkbox, radio, switch, range bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo"><div class="fk-form" style="width:100%">
+  <div class="fk-cluster"><label class="fk-check"><input type="checkbox" checked> Bülteni al</label><label class="fk-check"><input type="checkbox"> Kampanyalar</label></div>
+  <div class="fk-cluster" role="radiogroup" aria-label="Plan"><label class="fk-radio"><input type="radio" name="plan" checked> Aylık</label><label class="fk-radio"><input type="radio" name="plan"> Yıllık</label></div>
+  <label class="fk-switch"><input type="checkbox" role="switch" checked> Karanlık mod</label>
+  <div class="fk-field"><label class="fk-label" for="f-butce">Bütçe</label><input class="fk-range" id="f-butce" type="range" min="0" max="100" value="60"></div>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-form&quot; style=&quot;width:100%&quot;&gt;
+  &lt;div class=&quot;fk-cluster&quot;&gt;&lt;label class=&quot;fk-check&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt; Bülteni al&lt;/label&gt;&lt;label class=&quot;fk-check&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; Kampanyalar&lt;/label&gt;&lt;/div&gt;
+  &lt;div class=&quot;fk-cluster&quot; role=&quot;radiogroup&quot; aria-label=&quot;Plan&quot;&gt;&lt;label class=&quot;fk-radio&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;plan&quot; checked&gt; Aylık&lt;/label&gt;&lt;label class=&quot;fk-radio&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;plan&quot;&gt; Yıllık&lt;/label&gt;&lt;/div&gt;
+  &lt;label class=&quot;fk-switch&quot;&gt;&lt;input type=&quot;checkbox&quot; role=&quot;switch&quot; checked&gt; Karanlık mod&lt;/label&gt;
+  &lt;div class=&quot;fk-field&quot;&gt;&lt;label class=&quot;fk-label&quot; for=&quot;f-butce&quot;&gt;Bütçe&lt;/label&gt;&lt;input class=&quot;fk-range&quot; id=&quot;f-butce&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;60&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div></figure>
+          <div class="fk-table-wrap"><table class="fk-table"><thead><tr><th scope="col">Sınıf / öznitelik</th><th scope="col">Açıklama</th></tr></thead><tbody><tr><td><code>label.fk-check &gt; input[type=checkbox]</code></td><td>Yaylanan onay işaretli kutu</td></tr><tr><td><code>label.fk-radio &gt; input[type=radio]</code></td><td>Radyo düğmesi</td></tr><tr><td><code>label.fk-switch &gt; input[role=switch]</code></td><td>Açma/kapama anahtarı</td></tr><tr><td><code>input.fk-range</code></td><td>Kaydırıcı</td></tr></tbody></table></div>
+        </section>
+        <section id="dosya" aria-labelledby="dosya-t">
+          <h2 id="dosya-t"><span class="n">10</span>Dosya yükleme<a class="anchor" href="#dosya" aria-label="Dosya yükleme bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo"><label class="fk-drop" style="width:100%">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4 4 0 0 1-1 8H7Z"/><path d="M12 11v6M9.5 13.5 12 11l2.5 2.5"/></svg>
+  <strong>Dosyanı buraya sürükle</strong>
+  <small>ya da tıkla · en fazla 150 MB</small>
+  <input type="file" name="dosya">
+  <span class="fk-drop-file" aria-live="polite"></span>
+</label></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;label class=&quot;fk-drop&quot; style=&quot;width:100%&quot;&gt;
+  &lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4 4 0 0 1-1 8H7Z&quot;/&gt;&lt;path d=&quot;M12 11v6M9.5 13.5 12 11l2.5 2.5&quot;/&gt;&lt;/svg&gt;
+  &lt;strong&gt;Dosyanı buraya sürükle&lt;/strong&gt;
+  &lt;small&gt;ya da tıkla · en fazla 150 MB&lt;/small&gt;
+  &lt;input type=&quot;file&quot; name=&quot;dosya&quot;&gt;
+  &lt;span class=&quot;fk-drop-file&quot; aria-live=&quot;polite&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;</code></pre></div></figure>
+          <p>Seçilen dosyanın adı ve boyutu <code>fk-drop-file</code> içine otomatik yazılır. Sunucu tarafı için <a class="fk-link" href="/entegrasyon/#php-form">PHP form işleme</a> ve dosyalar tablosu için <a class="fk-link" href="/veritabani/#tablolar">veritabanı şemasına</a> bak.</p>
+        </section>
+        <section id="dogrulama" aria-labelledby="dogrulama-t">
+          <h2 id="dogrulama-t"><span class="n">11</span>Doğrulama<a class="anchor" href="#dogrulama" aria-label="Doğrulama bölümüne bağlantı">#</a></h2>
+
+          <p>Forma <code>data-fk-validate</code> ekle. Alanlar odaktan çıkınca kontrol edilir; gönderirken hatalı ilk alana odaklanılır ve bildirim gösterilir. Kurallar yerleşik HTML öznitelikleridir: <code>required</code>, <code>type="email"</code>, <code>minlength</code>, <code>pattern</code>…</p>
+          <figure class="ex"><div class="ex-demo is-center"><form class="fk-form" data-fk-validate data-fk-demo data-fk-success="Mesajın iletildi, teşekkürler!" style="width:100%;max-width:520px">
+  <div class="fk-form-row">
+    <div class="fk-field"><label class="fk-label" for="v-ad">Ad <span class="fk-req">*</span></label><input type="text" class="fk-input" id="v-ad" required minlength="2" data-fk-msg="Adını en az 2 harf yaz."><span class="fk-error"></span></div>
+    <div class="fk-field"><label class="fk-label" for="v-mail">E-posta <span class="fk-req">*</span></label><input class="fk-input" id="v-mail" type="email" required data-fk-msg="Geçerli bir e-posta yaz."><span class="fk-error"></span></div>
+  </div>
+  <div class="fk-field"><label class="fk-label" for="v-msg">Mesaj <span class="fk-req">*</span></label><textarea class="fk-textarea" id="v-msg" required minlength="10" data-fk-msg="Mesaj en az 10 karakter olmalı."></textarea><span class="fk-error"></span></div>
+  <label class="fk-check"><input type="checkbox" required> KVKK metnini okudum</label>
+  <button class="fk-btn fk-btn-primary" type="submit">Gönder <svg class="fk-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</form></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><span class="title">Boş gönderip dene</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;form class=&quot;fk-form&quot; data-fk-validate data-fk-demo data-fk-success=&quot;Mesajın iletildi, teşekkürler!&quot; style=&quot;width:100%;max-width:520px&quot;&gt;
+  &lt;div class=&quot;fk-form-row&quot;&gt;
+    &lt;div class=&quot;fk-field&quot;&gt;&lt;label class=&quot;fk-label&quot; for=&quot;v-ad&quot;&gt;Ad &lt;span class=&quot;fk-req&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;input type=&quot;text&quot; class=&quot;fk-input&quot; id=&quot;v-ad&quot; required minlength=&quot;2&quot; data-fk-msg=&quot;Adını en az 2 harf yaz.&quot;&gt;&lt;span class=&quot;fk-error&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;fk-field&quot;&gt;&lt;label class=&quot;fk-label&quot; for=&quot;v-mail&quot;&gt;E-posta &lt;span class=&quot;fk-req&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;input class=&quot;fk-input&quot; id=&quot;v-mail&quot; type=&quot;email&quot; required data-fk-msg=&quot;Geçerli bir e-posta yaz.&quot;&gt;&lt;span class=&quot;fk-error&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;fk-field&quot;&gt;&lt;label class=&quot;fk-label&quot; for=&quot;v-msg&quot;&gt;Mesaj &lt;span class=&quot;fk-req&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;textarea class=&quot;fk-textarea&quot; id=&quot;v-msg&quot; required minlength=&quot;10&quot; data-fk-msg=&quot;Mesaj en az 10 karakter olmalı.&quot;&gt;&lt;/textarea&gt;&lt;span class=&quot;fk-error&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;label class=&quot;fk-check&quot;&gt;&lt;input type=&quot;checkbox&quot; required&gt; KVKK metnini okudum&lt;/label&gt;
+  &lt;button class=&quot;fk-btn fk-btn-primary&quot; type=&quot;submit&quot;&gt;Gönder &lt;svg class=&quot;fk-go&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M5 12h14M13 6l6 6-6 6&quot;/&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;/form&gt;</code></pre></div></figure>
+          <div class="fk-table-wrap"><table class="fk-table"><thead><tr><th scope="col">Sınıf / öznitelik</th><th scope="col">Açıklama</th></tr></thead><tbody><tr><td><code>form[data-fk-validate]</code></td><td>Doğrulamayı açar (tarayıcı balonlarını kapatır)</td></tr><tr><td><code>data-fk-msg</code></td><td>Alan için özel hata mesajı</td></tr><tr><td><code>data-fk-error</code></td><td>Form genel hata bildirimi</td></tr><tr><td><code>data-fk-demo</code></td><td>Sadece demo: gerçekten göndermez, başarı bildirimi gösterir</td></tr><tr><td><code>data-fk-success</code></td><td>Demo başarı mesajı</td></tr></tbody></table></div>
+          <div class="callout callout-warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4M12 17h.01"/></svg><div><p><strong>Sunucuda da doğrula</strong>Tarayıcı doğrulaması kullanıcı deneyimi içindir; güvenlik değildir. Her alanı sunucuda yeniden kontrol et.</p></div></div>
+        </section>
+        <section id="giris" aria-labelledby="giris-t">
+          <h2 id="giris-t"><span class="n">12</span>Tam örnek: giriş formu<a class="anchor" href="#giris" aria-label="Tam örnek: giriş formu bölümüne bağlantı">#</a></h2>
+
+          <figure class="ex"><div class="ex-demo is-center"><div class="fk-card" style="width:100%;max-width:420px">
+  <h3 class="fk-card-title" style="text-align:center">Tekrar <em>hoş geldin.</em></h3>
+  <form class="fk-form" data-fk-validate data-fk-demo data-fk-success="Giriş başarılı (demo)" style="margin-top:20px">
+    <div class="fk-field"><label class="fk-label" for="g-mail">E-posta</label><div class="fk-input-group"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg><input class="fk-input" id="g-mail" type="email" autocomplete="email" required data-fk-msg="E-postanı yaz."></div><span class="fk-error"></span></div>
+    <div class="fk-field"><label class="fk-label" for="g-pass">Şifre</label><div class="fk-input-group"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><input class="fk-input" id="g-pass" type="password" autocomplete="current-password" required minlength="8" data-fk-msg="Şifre en az 8 karakter."><button class="fk-btn fk-btn-icon" type="button" data-fk-password aria-label="Şifreyi göster"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div><span class="fk-error"></span></div>
+    <label class="fk-check"><input type="checkbox"> Beni hatırla</label>
+    <button class="fk-btn fk-btn-primary fk-btn-block" type="submit">Giriş yap</button>
+  </form>
+</div></div><div class="ex-code"><div class="code-bar"><span class="lang">HTML</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-html">&lt;div class=&quot;fk-card&quot; style=&quot;width:100%;max-width:420px&quot;&gt;
+  &lt;h3 class=&quot;fk-card-title&quot; style=&quot;text-align:center&quot;&gt;Tekrar &lt;em&gt;hoş geldin.&lt;/em&gt;&lt;/h3&gt;
+  &lt;form class=&quot;fk-form&quot; data-fk-validate data-fk-demo data-fk-success=&quot;Giriş başarılı (demo)&quot; style=&quot;margin-top:20px&quot;&gt;
+    &lt;div class=&quot;fk-field&quot;&gt;&lt;label class=&quot;fk-label&quot; for=&quot;g-mail&quot;&gt;E-posta&lt;/label&gt;&lt;div class=&quot;fk-input-group&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;rect x=&quot;3&quot; y=&quot;5&quot; width=&quot;18&quot; height=&quot;14&quot; rx=&quot;3&quot;/&gt;&lt;path d=&quot;m4 7 8 6 8-6&quot;/&gt;&lt;/svg&gt;&lt;input class=&quot;fk-input&quot; id=&quot;g-mail&quot; type=&quot;email&quot; autocomplete=&quot;email&quot; required data-fk-msg=&quot;E-postanı yaz.&quot;&gt;&lt;/div&gt;&lt;span class=&quot;fk-error&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;fk-field&quot;&gt;&lt;label class=&quot;fk-label&quot; for=&quot;g-pass&quot;&gt;Şifre&lt;/label&gt;&lt;div class=&quot;fk-input-group&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;rect x=&quot;5&quot; y=&quot;11&quot; width=&quot;14&quot; height=&quot;10&quot; rx=&quot;2.5&quot;/&gt;&lt;path d=&quot;M8 11V8a4 4 0 0 1 8 0v3&quot;/&gt;&lt;/svg&gt;&lt;input class=&quot;fk-input&quot; id=&quot;g-pass&quot; type=&quot;password&quot; autocomplete=&quot;current-password&quot; required minlength=&quot;8&quot; data-fk-msg=&quot;Şifre en az 8 karakter.&quot;&gt;&lt;button class=&quot;fk-btn fk-btn-icon&quot; type=&quot;button&quot; data-fk-password aria-label=&quot;Şifreyi göster&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z&quot;/&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;3&quot;/&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;&lt;span class=&quot;fk-error&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;label class=&quot;fk-check&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; Beni hatırla&lt;/label&gt;
+    &lt;button class=&quot;fk-btn fk-btn-primary fk-btn-block&quot; type=&quot;submit&quot;&gt;Giriş yap&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</code></pre></div></figure>
+        </section>
+        <section id="gonderme" aria-labelledby="gonderme-t">
+          <h2 id="gonderme-t"><span class="n">13</span>Formu sunucuya gönderme<a class="anchor" href="#gonderme" aria-label="Formu sunucuya gönderme bölümüne bağlantı">#</a></h2>
+
+          <p>Formu sayfayı yenilemeden göndermek için <code>fetch</code> kullan; sonucu <code>FK.toast</code> ile göster.</p>
+          <div class="codeblock"><div class="code-bar"><span class="lang">JavaScript</span><button class="copy-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></svg>Kopyala</button></div><pre><code class="lang-js">document.querySelector('#iletisim').addEventListener('submit', async (e) =&gt; {
+  e.preventDefault();
+  const form = e.currentTarget;
+  const btn = form.querySelector('[type=&quot;submit&quot;]');
+  btn.classList.add('is-loading');
+  try {
+    const res = await fetch('/api/iletisim.php', { method: 'POST', body: new FormData(form) });
+    const data = await res.json();
+    if (!res.ok || !data.ok) throw new Error(data.error || 'Gönderilemedi');
+    form.reset();
+    FK.toast('Mesajın iletildi!', 'success');
+  } catch (err) {
+    FK.toast(err.message, 'danger');
+  } finally {
+    btn.classList.remove('is-loading');
+  }
+});</code></pre></div>
+          <p>PHP tarafı (doğrulama, CSRF, veritabanına yazma) için <a class="fk-link" href="/entegrasyon/#php-form">Framework &amp; PHP</a> sayfasına geç.</p>
+        </section>
+      </div>
+      <nav class="pager" aria-label="Sayfalar arası"><a class="prev" href="/bilesenler/"><span>← Önceki</span><b>Bileşenler A–Z</b></a><a class="next" href="/hareket/"><span>Sonraki →</span><b>Hareket &amp; JS</b></a></nav>
+    </main>
+    <aside class="docs-toc" aria-label="Bu sayfada"><p>Bu sayfada</p><ul><li><a href="#yapi">Alan yapısı</a></li><li><a href="#input">Input, select ve textarea</a></li><li><a href="#gruplar">İkonlu alan ve şifre</a></li><li><a href="#boyutlar">Boyutlar, ön ek ve kopyalama alanı</a></li><li><a href="#sayac">Karakter sayacı</a></li><li><a href="#otp">Doğrulama kodu (OTP)</a></li><li><a href="#stepper">Sayı seçici (stepper)</a></li><li><a href="#etiketler">Etiket girişi</a></li><li><a href="#secimler">Checkbox, radio, switch, range</a></li><li><a href="#dosya">Dosya yükleme</a></li><li><a href="#dogrulama">Doğrulama</a></li><li><a href="#giris">Tam örnek: giriş formu</a></li><li><a href="#gonderme">Formu sunucuya gönderme</a></li></ul></aside>
+  </div>
+  <footer class="fk-fc-wrap">
+    <div class="fk-fc">
+      <a class="fk-fc-brand" href="/">fkdev <i>UI</i></a>
+      <p class="fk-fc-tag">Tasarım sistemi · CDN · v2.4.1</p>
+      <ul class="fk-fc-social"><li><a href="https://linkedin.com/in/furkankirci" target="_blank" rel="noopener me" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm6.5 0h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75V21h-4V9.5Z"/></svg></a></li><li><a href="https://github.com/furkankirci" target="_blank" rel="noopener me" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a></li><li><a href="https://x.com/furkankirci" target="_blank" rel="noopener me" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.78L17.75 3Zm-1.08 16.2h1.7L7.4 4.73H5.57l11.1 14.47Z"/></svg></a></li><li><a href="https://medium.com/@furkankirci" target="_blank" rel="noopener me" aria-label="Medium"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 12a6.75 6.75 0 1 1-13.5 0 6.75 6.75 0 0 1 13.5 0Zm7.4 0c0 3.5-1.5 6.36-3.37 6.36S14.16 15.5 14.16 12s1.51-6.36 3.37-6.36S20.9 8.5 20.9 12ZM24 12c0 3.13-.53 5.68-1.18 5.68s-1.18-2.55-1.18-5.68.53-5.68 1.18-5.68S24 8.87 24 12Z"/></svg></a></li></ul>
+      <nav class="fk-fc-nav" aria-label="Alt menü"><ul><li><a href="/">Genel bakış</a></li><li><a href="/baslangic/">Kurulum</a></li><li><a href="/cdn/">CDN</a></li><li><a href="/temeller/">Temeller</a></li><li><a href="/bilesenler/">Bileşenler A–Z</a></li><li><a href="/formlar/">Formlar</a></li><li><a href="/hareket/">Hareket &amp; JS</a></li><li><a href="/kaliplar/">Kalıplar</a></li><li><a href="/veritabani/">Veritabanı</a></li><li><a href="/entegrasyon/">Framework &amp; PHP</a></li><li><a href="/yapay-zeka/">Yapay zekâ</a></li><li><a href="/yayin/">SEO, güvenlik, yayın</a></li><li><a href="/surumler/">Sürüm notları</a></li><li><a href="/sozluk/">Sözlük A–Z</a></li><li><a href="https://admin.fkdev.sbs/">Admin ↗</a></li></ul></nav>
+      <ul class="fk-fc-contact">
+        <li><button type="button" data-fk-copy="fkdevs" data-fk-msg="WhatsApp kullanıcı adı kopyalandı: fkdevs"><span class="fk-fc-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></span>fkdevs</button></li>
+        <li><a href="mailto:merhaba@fkdev.sbs"><span class="fk-fc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></span>merhaba@fkdev.sbs</a></li>
+        <li><a href="mailto:ik@fkdev.sbs"><span class="fk-fc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>ik@fkdev.sbs</a></li>
+        <li><a href="https://yukle.fkdev.sbs/" target="_blank" rel="noopener"><span class="fk-fc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M6 9l6-6 6 6M4 20h16"/></svg></span>yukle.fkdev.sbs</a></li>
+      </ul>
+      <nav class="fk-fc-eco" aria-label="fkdev ekosistemi"><a href="https://www.fkdev.sbs/">fkdev.sbs</a><a href="https://ui.fkdev.sbs/" aria-current="true">ui.fkdev.sbs</a><a href="https://admin.fkdev.sbs/">admin.fkdev.sbs</a></nav>
+      <div class="fk-fc-bottom">
+        <p>© 2026 Furkan Kırcı · MIT</p>
+        <p class="fk-fc-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Bursa · Nerede isterseniz</p>
+        <button class="fk-fc-top" type="button" data-fk-top>Başa dön <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+      </div>
+    </div>
+  </footer>
+  <dialog class="search-dlg" id="search" aria-labelledby="search-t"><h2 class="fk-sr" id="search-t">Dokümantasyonda ara</h2>
+    <div class="search-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" placeholder="Bileşen, sınıf ya da konu ara…" aria-label="Arama" autocomplete="off"><span class="fk-kbd">Esc</span></div>
+    <ul class="search-res"></ul>
+    <div class="search-foot"><span><span class="fk-kbd">↑</span> <span class="fk-kbd">↓</span> gezin</span><span><span class="fk-kbd">Enter</span> aç</span></div>
+  </dialog>
+  <script src="/v2.4.1/fkdev-ui.min.js" defer></script>
+  <script src="/assets/docs.js" defer></script>
+</body>
+</html>
